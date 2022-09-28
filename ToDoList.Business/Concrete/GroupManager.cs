@@ -9,29 +9,27 @@ using ToDoList.Entities.Concrete;
 
 namespace ToDoList.Business.Concrete
 {
-    public class MissionManager : IMissionService
+    public class GroupManager : IGroupService
     {
-
-        MissionDal missionDal = new MissionDal();
-
-        public Mission AddT(Mission t)
+        GroupDal groupDal = new GroupDal();
+        public Group AddT(Group t)
         {
-            return missionDal.TAdd(t);  
+            return groupDal.TAdd(t);
         }
 
         public void DeleteT(int id)
         {
-            missionDal.TDelete(id);
+            groupDal.TDelete(id);
         }
 
-        public List<Mission> GetAll()
+        public List<Group> GetAll()
         {
-            return missionDal.GetAll();
+            return groupDal.GetAll();
         }
 
-        public void UpdateT(int id, Mission t)
+        public void UpdateT(int id, Group t)
         {
-            missionDal.TUpdate(id, t);  
+            groupDal.TUpdate(id, t);    
         }
     }
 }

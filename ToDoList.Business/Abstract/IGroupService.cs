@@ -7,9 +7,8 @@ using ToDoList.Entities.Concrete;
 
 namespace ToDoList.Business.Abstract
 {
-    public interface IMissionService : IGenericService<Mission>
+    public interface IGroupService :IGenericService<Group>
     {
-        
-    }
 
+    }
 }
